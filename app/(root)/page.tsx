@@ -14,11 +14,10 @@ const Home = async({searchParams}:{
   const params = {search: query || null}
   // const posts = await client.fetch(STARTUP_QUERY);
   const {data: posts} = await sanityFetch({ query: STARTUP_QUERY, params}); //this will revalidate the page whenever new changes is made from the data source of
-  const session = await auth();
-  if(!session) {
-    return null;
-  }
-  console.log(session?.id, "session id");
+  // const session = await auth();
+  // if(!session) {
+  //   return null;
+  // }
   return (
     <>
     <section className='pink_container'>
